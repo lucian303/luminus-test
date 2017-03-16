@@ -6,8 +6,10 @@
             [mount.core :as mount]))
 
 ; this allow the repl/ lein run to work, but doesn't help lein uberjar and shouldn't be needed
-(mount/start)
-(db/get-term-names)
+;(mount/start)
+(defn testmount []
+  (db/get-term-names))
+(testmount)
 
 (defapi service-routes
   {:swagger {:ui "/swagger-ui"
