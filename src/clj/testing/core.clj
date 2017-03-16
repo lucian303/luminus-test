@@ -6,6 +6,7 @@
             [testing.config :refer [env]]
             [clojure.tools.cli :refer [parse-opts]]
             [clojure.tools.logging :as log]
+            [testing.db.core :as db]
             [mount.core :as mount])
   (:gen-class))
 
@@ -55,4 +56,4 @@
       (System/exit 0))
     :else
     (start-app args)))
-  
+
